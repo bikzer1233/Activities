@@ -1,0 +1,180 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav button {
+    background: #fff;
+    color: #333;
+    margin: 10px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+nav button:hover {
+    transform: scale(1.1);
+    background: #ffcb05;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: 0.9rem;
+}
+
+/* Activity Sections */
+.hidden {
+    display: none;
+}
+
+.activity {
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Styled Checkbox */
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.checkbox-container:hover {
+    transform: scale(1.05);
+}
+
+.checkbox-container input {
+    display: none;
+}
+
+.checkbox-svg {
+    width: 30px;
+    height: 30px;
+    border: 2px solid white;
+    margin-right: 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.checkbox-svg polyline {
+    fill: none;
+    stroke: #00ffcc;
+    stroke-width: 3;
+    stroke-dasharray: 24;
+    stroke-dashoffset: 24;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+.checkbox-container input:checked + .checkbox-svg polyline {
+    stroke-dashoffset: 0;
+}
+
+/* 3D Hover */
+.hover-card {
+    width: 250px;
+    height: 250px;
+    background: #ffcb05;
+    color: #333;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    perspective: 800px;
+}
+
+.hover-card:hover {
+    transform: rotateY(25deg) rotateX(10deg);
+}
+
+/* Gradient Hover */
+.gradient-button {
+    padding: 20px 50px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    background: radial-gradient(circle closest-side at var(--x, 50%) var(--y, 50%), #ff8a00, transparent);
+    color: white;
+    cursor: pointer;
+    transition: background 0.1s, transform 0.3s;
+}
+
+.gradient-button:hover {
+    transform: scale(1.05);
+}
+
+/* Loader Animation */
+.bouncing-loader {
+    display: flex;
+    justify-content: center;
+}
+
+.bouncing-loader div {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background: #00ffcc;
+    border-radius: 50%;
+    animation: bouncing 0.6s infinite alternate;
+}
+
+.bouncing-loader div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bouncing-loader div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bouncing {
+    to {
+        transform: translateY(-20px);
+        opacity: 0.6;
+    }
+}

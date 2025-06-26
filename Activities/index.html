@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Activities</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>✨ Creative Web Activities ✨</h1>
+        <nav>
+            <button onclick="showSection('checkbox')">✅ Checkbox</button>
+            <button onclick="showSection('hover3d')">🌀 3D Hover</button>
+            <button onclick="showSection('gradientHover')">🌈 Gradient Hover</button>
+            <button onclick="showSection('loader')">⏳ Loader</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Styled Checkbox -->
+        <section id="checkbox" class="activity">
+            <h2>✅ Styled Checkbox Animation</h2>
+            <label class="checkbox-container">
+                <input type="checkbox">
+                <svg viewBox="0 0 24 24" class="checkbox-svg">
+                    <symbol id="check" viewBox="0 0 24 24">
+                        <polyline points="4 12 10 18 20 6"></polyline>
+                    </symbol>
+                    <use xlink:href="#check"></use>
+                </svg>
+                <span>Click Me!</span>
+            </label>
+        </section>
+
+        <!-- 3D Hover -->
+        <section id="hover3d" class="activity hidden">
+            <h2>🌀 3D Perspective Hover</h2>
+            <div class="hover-card">Hover Over Me</div>
+        </section>
+
+        <!-- Mouse-Following Gradient -->
+        <section id="gradientHover" class="activity hidden">
+            <h2>🌈 Mouse Gradient Hover</h2>
+            <button class="gradient-button">Move Around Me</button>
+        </section>
+
+        <!-- Loader Animation -->
+        <section id="loader" class="activity hidden">
+            <h2>⏳ Creative Loader Animation</h2>
+            <div class="bouncing-loader">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with ❤️ using HTML, CSS & JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
